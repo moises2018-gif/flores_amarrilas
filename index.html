@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario HTML/CSS | OCHOA NARANJO</title>
+</head>
+<body>
+    <div class="fondo">
+        <form id="miFormulario" onsubmit="return validarFormulario()">
+            <h1>HOLI LEO</h1>
+            <div class="contenedor">
+                <input id="type" type="text" placeholder="Nombres de la reina" required>
+            </div>
+            <div class="contenedor">
+                <input id="password" type="password" placeholder="su cumpleaños" required>
+            </div>
+            <div class="recordar">
+                <label for="#"><input type="checkbox">Recordar contraseña</label>
+                <a href="#">¿Olvidaste TU NOMBRE REALLY?</a>
+            </div>
+            <button type="submit" class="btn">Dele aqui princesa</button>
+            <div class="registro-enlace">
+                <p><a href="index2.html">Crear</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validarFormulario() {
+            var type = document.getElementById("type").value;
+            var password = document.getElementById("password").value;
+
+            // Verificar si se ingresaron valores específicos para type y password
+            if (type === "Leonela Maribel" && password === "9 de marzo") {
+                // Avanzar al siguiente formulario
+                alert("Acceso permitido. Avanzando al siguiente formulario.");
+                // Aquí puedes redirigir o realizar alguna acción para avanzar al siguiente formulario.
+                return true;
+            } else {
+                // Mostrar un mensaje de error si los valores no son correctos
+                alert("Acceso denegado. Ponga bien sus datos leonela maribel :).");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
